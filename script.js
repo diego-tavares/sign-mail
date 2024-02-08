@@ -11,52 +11,49 @@ document.getElementById('signatureForm').addEventListener('submit', function(eve
     var operation = document.getElementById('operation').value; // Obter o valor selecionado da ListBox de Operação
 
     // Gerar a assinatura no padrão desejado
-    var logoWeb = '<img src="https://3geo.io/wordpress/wp-content/uploads/2024/02/website.png" alt="Website" style="width: 50px; height: 50px;"></img>'
+    var logoWeb = '&#160&#160<a href="https://3geo.io"><img src="https://3geo.io/wordpress/wp-content/uploads/2024/02/website.png" alt="Website" style="width: 30px; height: 30px;"></img></a>';
    
-    var logoLinkedin = '<a href="https://www.linkedin.com/company/3geo-consultoria-3geo-consulting/"><img src="https://3geo.io/wordpress/wp-content/uploads/2024/02/linkedin.png" alt="LinkedIn" style="width: 50px; height: 50px;"></a><br>'
-    
+    var logoLinkedin = '<a href="https://www.linkedin.com/company/3geo-consultoria-3geo-consulting/"><img src="https://3geo.io/wordpress/wp-content/uploads/2024/02/linkedin.png" alt="LinkedIn" style="width: 30px; height: 30px;"></a>';
 
-    var mainOfficeInfo = 'Rua Tupis nº 144<br>' +
-                         'casa 2 - São Francisco, Niterói, RJ<br>' +
-                         'CEP/ Zipcode: 24.360-400';
+    var mainOfficeInfo = 'Avenida dos Engenheiros, 431, Manacás, Belo Horizonte - MG<br>' +
+    'CEP/Zipcode:  30.840-563';
    
-    var phone = 'Telefone: (21) 2718-3968'
+    var phone = 'Telefone: +55 (21) 2718-3968';
     
     var operationalOfficeInfo = ''; // Inicializar a variável para armazenar o valor exclusivo para operationalOffice
 
     // Tratar a resposta da ListBox de Operação e definir o valor exclusivo para operationalOffice
     switch (operation) {
         case 'RJ':
-            operationalOfficeInfo = 'Rua Tupis nº 144<br>' +
-                                     'casa 2 - São Francisco, Niterói, RJ<br>' +
+            operationalOfficeInfo = 'Rua Tupis nº 144 casa 2 - São Francisco, Niterói, RJ<br>' +
                                      'CEP/ Zipcode: 24.360-400';
             break;
         case 'MG':
-            operationalOfficeInfo = 'Rua Santinho Linhares, 34 - Hamilton, Itabira, MG<br>' +
+            operationalOfficeInfo = 'Rua Santinho Linhares, 34 -Hamilton, Itabira, MG<br>' +
                                      'CEP/ Zipcode: 35.900-383';
             break;
         case 'SP':
-            operationalOfficeInfo = 'Avenida dos Engenheiros, 431, Manacás, Belo Horizonte - MG<br>' +
-                                     'CEP/Zipcode:  30.840-563';
+            operationalOfficeInfo = 'Av. das Nações Unidas, 14261, Torre B, São Paulo/SP<br>' +
+                                     'CEP/Zipcode:  04.730-090';
             break;
     }
 
     // Inclui o número do celular corporativo, se aplicável
     var corporatePhoneInfo = '';
     if (corporatePhone === 'true') {
-        corporatePhoneInfo = 'Cel: (' + corporatePhoneDDD + ') ' + corporatePhoneNumber + '<br>';
+        corporatePhoneInfo = 'Cel: +55 (' + corporatePhoneDDD + ') ' + corporatePhoneNumber + '<br>';
     }
 
     // Preencher as células da tabela com as informações
     var signature = '<table style="font-family: Calibri; font-size: 9pt;">' +
                     '<tr>' +
-                    '<td class="coluna1" rowspan="2" style="text-align: center;"><img src="https://3geo.io/wordpress/wp-content/uploads/2023/09/Logo_horizontal-sem-fundo.png" alt="Logo" style="width: 220px; height: 96px;"></td>' +
-                        '<td>' + '<div class="name16">' + name + '</div><br>' + department + '<br>' + email + '</td>' +
-                        '<td><div style="display: flex; align-items: center;">' + logoLinkedin + logoWeb + '</div>' + corporatePhoneInfo + phone + '</td>' +
+                    '<td class="coluna1" rowspan="2" style="text-align: center;"><img src="https://3geo.io/wordpress/wp-content/uploads/2023/09/Logo_horizontal-sem-fundo.png" alt="Logo" style="width: 190; height: 60px;"></td>' +
+                        '<td style="vertical-align: top; max-width: 216px"><div class="name16">' + name + '</div><br><div style="vertical-align: bottom;"><strong>' + department + '</strong><br>' + email + '</div></td>' +
+                        '<td style="vertical-align: bottom; max-width: 216px"><div class="toTop" style="display: flex; align-items: center;">' + logoLinkedin + logoWeb + '</div>'+ '<div class="toBottom">' + corporatePhoneInfo + phone + '</div></td>' +
                     '</tr>' +
                     '<tr>' +
-                        '<td><strong>MAIN OFFICE: </strong>' + mainOfficeInfo + '</td>' +
-                        '<td><strong>OPERATIONAL OFFICE: <strong>' + operationalOfficeInfo + '</td>' +
+                        '<td style="max-width: 216px;"><strong>MAIN OFFICE: </strong>' + mainOfficeInfo + '</td>' +
+                        '<td style="max-width: 216px;"><strong>OPERATIONAL OFFICE: </strong>' + operationalOfficeInfo + '</td>' +
                     '</tr>' +
                 '</table>';
 
@@ -123,4 +120,12 @@ document.getElementById('copyButton').addEventListener('click', function() {
     document.execCommand('copy');
     window.getSelection().removeAllRanges();
     alert('Assinatura copiada para a área de transferência!');
+});
+
+
+
+// Adicione este código dentro da função de carregamento da página
+window.addEventListener('DOMContentLoaded', (event) => {
+    // Simula um clique no botão "Gerar assinatura"
+    document.querySelector('#signatureForm button[type="submit"]').click();
 });

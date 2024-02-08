@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-    max-width: 600px;
+    max-width: 650px;
     margin: 50px auto;
     padding: 20px;
     background-color: #fff;
@@ -52,12 +52,12 @@ button:hover {
 
 
 #signatureOutput table {
-    width: 100%;
+    width: 650px;
     border-collapse: collapse;
 }
 
 #signatureOutput table tr:nth-child(2) td {
-    border-top: 2px solid black; /* Adiciona uma borda preta apenas na linha entre a linha 1 e linha 2 */
+    border-top: 0.5pt solid #38B6AB; /* Adiciona uma borda preta apenas na linha entre a linha 1 e linha 2 */
 }
 
 #signatureOutput table td {
@@ -70,4 +70,14 @@ button:hover {
 
 .name16 {
     font-size: 16pt;
+    color: #38B6AB;
 }
+
+.toTop {
+    vertical-align: bottom !important;
+}
+
+td {
+    color: #70706f;
+}
+
