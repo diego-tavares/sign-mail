@@ -123,9 +123,3 @@ document.getElementById('copyButton').addEventListener('click', function() {
 });
 
 
-
-// Adicione este código dentro da função de carregamento da página
-window.addEventListener('DOMContentLoaded', (event) => {
-    // Simula um clique no botão "Gerar assinatura"
-    document.querySelector('#signatureForm button[type="submit"]').click();
-});

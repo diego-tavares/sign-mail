@@ -1,83 +1,103 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+/* Reset de estilos */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
 .container {
-    max-width: 650px;
+    max-width: 600px;
     margin: 50px auto;
     padding: 20px;
     background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
     text-align: center;
+    margin-bottom: 30px;
+    color: #009186;
 }
 
-label {
-    display: block;
+form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+form label {
+    flex: 1 0 100%;
     margin-bottom: 5px;
+    font-weight: bold;
+    color: #666;
 }
 
-input[type="text"],
-input[type="email"] {
-    width: 100%;
+form input[type="text"],
+form input[type="email"],
+form select {
+    flex: 1 0 100%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #007bff;
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form select:focus {
+    border-color: #009186;
+}
+
+form button {
+    flex: 1 0 100%;
+    padding: 10px;
+    background-color: #009186;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #0056b3;
+form button:hover {
+    background-color: #007a6e;
 }
 
-#signatureOutput {
+.signatureOutput {
     margin-top: 20px;
+    text-align: center;
 }
 
-
-#signatureOutput table {
-    width: 650px;
+.signatureOutput table {
+    width: 100%;
     border-collapse: collapse;
 }
 
-#signatureOutput table tr:nth-child(2) td {
-    border-top: 0.5pt solid #38B6AB; /* Adiciona uma borda preta apenas na linha entre a linha 1 e linha 2 */
+.signatureOutput table tr:nth-child(2) td {
+    border-top: 1px solid #ddd;
 }
 
-#signatureOutput table td {
-    padding: 10px; /* Adiciona um espaçamento interno */
+.signatureOutput table td {
+    padding: 10px;
+    font-size: 14px;
+    color: #555;
 }
 
-.coluna1 {
-    border-color: transparent; /* Remove a cor do border */
+.fadeout {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none; /* Impede que elementos sejam clicados durante a animação */
 }
 
-.name16 {
-    font-size: 16pt;
-    color: #38B6AB;
+.fadein {
+    opacity: 1;
+    transition: opacity 0.5s ease;
 }
-
-.toTop {
-    vertical-align: bottom !important;
-}
-
-td {
-    color: #70706f;
-}
-
