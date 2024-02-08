@@ -1,103 +1,121 @@
-/* Reset de estilos */
-* {
-    box-sizing: border-box;
+body {
+    font-family: Calibri, Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
+    font-size: 12px;
 }
 
 .container {
-    max-width: 600px;
+    max-width: 650px;
     margin: 50px auto;
     padding: 20px;
     background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
     text-align: center;
-    margin-bottom: 30px;
-    color: #009186;
 }
 
-form {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-form label {
-    flex: 1 0 100%;
+label {
+    display: block;
     margin-bottom: 5px;
-    font-weight: bold;
-    color: #666;
 }
 
-form input[type="text"],
-form input[type="email"],
-form select {
-    flex: 1 0 100%;
+input[type="text"],
+input[type="email"] {
+    width: 100%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #f9f9f9;
-    transition: border-color 0.3s ease;
+    box-sizing: border-box;
 }
 
-form input[type="text"]:focus,
-form input[type="email"]:focus,
-form select:focus {
-    border-color: #009186;
-}
-
-form button {
-    flex: 1 0 100%;
-    padding: 10px;
-    background-color: #009186;
+button {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 10px 20px;
+    background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    margin-top: 5px;
 }
 
-form button:hover {
-    background-color: #007a6e;
+button:hover {
+    background-color: #0056b3;
 }
 
-.signatureOutput {
+#signatureOutput {
     margin-top: 20px;
-    text-align: center;
 }
 
-.signatureOutput table {
-    width: 100%;
+
+#signatureOutput table {
+    width: 650px;
     border-collapse: collapse;
 }
 
-.signatureOutput table tr:nth-child(2) td {
-    border-top: 1px solid #ddd;
+#signatureOutput table tr:nth-child(2) td {
+    border-top: 0.5pt solid #38B6AB; /* Adiciona uma borda preta apenas na linha entre a linha 1 e linha 2 */
 }
 
-.signatureOutput table td {
-    padding: 10px;
-    font-size: 14px;
-    color: #555;
+#signatureOutput table td {
+    padding: 10px; /* Adiciona um espaçamento interno */
 }
 
-.fadeout {
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    pointer-events: none; /* Impede que elementos sejam clicados durante a animação */
+.coluna1 {
+    border-color: transparent; /* Remove a cor do border */
 }
 
-.fadein {
-    opacity: 1;
-    transition: opacity 0.5s ease;
+.name16 {
+    font-size: 16pt;
+    color: #38B6AB;
 }
+
+.toTop {
+    vertical-align: bottom !important;
+}
+
+td {
+    color: #70706f;
+}
+
+button {
+    display: block; /* Certifica-se de que o botão ocupa toda a largura do contêiner */
+    margin: 20px auto; /* Margem superior e inferior de 20px e margem lateral automática para centralizá-lo horizontalmente */
+}
+
+.containerLabel {
+    display: flex; /* Altera o layout para flexbox */
+    flex-wrap: nowrap; /* Permite que os elementos quebrem para a próxima linha se não couberem em uma linha */
+    
+}
+
+
+#department, #operation, #corporatePhone {
+    font-size: 10px;
+}
+
+
+.phoneMiddle {
+    display: flex; /* Altera o layout para flexbox */
+    flex-wrap: wrap; /* Permite que os elementos quebrem para a próxima linha se não couberem em uma linha */
+    justify-content: center;
+    margin: 10px;
+}
+
+#corporatePhoneDDD {
+    width: 50px;
+    margin-right: 20px;
+}
+
+#corporatePhoneNumber {
+    width: 150px;
+}
+
