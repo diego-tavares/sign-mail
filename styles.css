@@ -1,27 +1,31 @@
 body {
     font-family: Calibri, Arial, sans-serif;
-    background-color: #f4f4f4;
+    background: linear-gradient(135deg, #00675B, #38B6AB, #BADFDE);
+    height: 100vh;
     margin: 0;
     padding: 0;
-    font-size: 12px;
+    font-size: 14px;
+    color: #00675B;
 }
 
 .container {
     max-width: 650px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
     text-align: center;
+    font-size: 32px;
 }
 
 label {
     display: block;
     margin-bottom: 5px;
+    font-weight: bolder;
 }
 
 input[type="text"],
@@ -34,22 +38,7 @@ input[type="email"] {
     box-sizing: border-box;
 }
 
-button {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 5px;
-}
 
-button:hover {
-    background-color: #0056b3;
-}
 
 #signatureOutput {
     margin-top: 20px;
@@ -89,17 +78,30 @@ td {
 button {
     display: block; /* Certifica-se de que o botão ocupa toda a largura do contêiner */
     margin: 20px auto; /* Margem superior e inferior de 20px e margem lateral automática para centralizá-lo horizontalmente */
+    background-color: #00675B;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+button:hover {
+  background-color: #38B6AB;
+  transform: scale(1.05);
+
+}
 .containerLabel {
     display: flex; /* Altera o layout para flexbox */
     flex-wrap: nowrap; /* Permite que os elementos quebrem para a próxima linha se não couberem em uma linha */
-    
+    justify-content: space-between;
 }
 
-
-#department, #operation, #corporatePhone {
-    font-size: 10px;
+#name, #email, #department, #operation, #corporatePhone, #corporatePhoneDDD, #corporatePhoneNumber {
+    font-size: 11px;
+    color: #70706f;
 }
 
 
