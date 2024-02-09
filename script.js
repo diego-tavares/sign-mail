@@ -25,7 +25,7 @@ document.getElementById('signatureForm').addEventListener('submit', function(eve
     // Tratar a resposta da ListBox de Operação e definir o valor exclusivo para operationalOffice
     switch (operation) {
         case 'RJ':
-            operationalOfficeInfo = 'Rua Tupis nº 144 casa 2 - São Francisco, Niterói, RJ<br>' +
+            operationalOfficeInfo = 'Rua Tupis nº 144 casa 2 ' + '<br>' + 'São Francisco, Niterói, RJ<br>' +
                                      'CEP/ Zipcode: 24.360-400';
             break;
         case 'MG':
@@ -52,8 +52,8 @@ document.getElementById('signatureForm').addEventListener('submit', function(eve
                         '<td style="vertical-align: bottom; max-width: 216px"><div class="toTop" style="display: flex; align-items: center;">' + logoLinkedin + logoWeb + '</div>'+ '<div class="toBottom">' + corporatePhoneInfo + phone + '</div></td>' +
                     '</tr>' +
                     '<tr>' +
-                        '<td style="max-width: 216px;"><strong>MAIN OFFICE: </strong>' + mainOfficeInfo + '</td>' +
-                        '<td style="max-width: 216px;"><strong>OPERATIONAL OFFICE: </strong>' + operationalOfficeInfo + '</td>' +
+                        '<td style="max-width: 216px;"><strong>MATRIZ: </strong>' + mainOfficeInfo + '</td>' +
+                        '<td style="max-width: 216px;"><strong>FILIAL: </strong>' + operationalOfficeInfo + '</td>' +
                     '</tr>' +
                 '</table>';
 
