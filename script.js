@@ -9,9 +9,14 @@ document.getElementById('signatureForm').addEventListener('submit', function(eve
     var corporatePhoneDDD = document.getElementById('corporatePhoneDDD').value;
     var corporatePhoneNumber = document.getElementById('corporatePhoneNumber').value;
     var operation = document.getElementById('operation').value; // Obter o valor selecionado da ListBox de Operação
+    var hasCorporatePhone = document.getElementById('hasCorporatePhone').checked;
 
     // Gerar a assinatura no padrão desejado
     var logoWeb = '&#160&#160<a href="https://3geo.io"><img src="https://3geo.io/wordpress/wp-content/uploads/2024/02/website.png" alt="Website" style="width: 30px; height: 30px;"></img></a>';
+   
+    var numeroWpp = 'https://api.whatsapp.com/send/?phone=55' + corporatePhoneDDD + corporatePhoneNumber.replace("-", "") + '&text&type=phone_number&app_absent=0';
+
+    var logoWpp = '&#160&#160<a href="' + numeroWpp + '"><img src="https://3geo.io/wordpress/wp-content/uploads/2024/02/logo-wpp-cinza.png" alt="Website" style="width: 30px; height: 30px;"></img></a>';
    
     var logoLinkedin = '<a href="https://www.linkedin.com/company/3geo-consultoria-3geo-consulting/"><img src="https://3geo.io/wordpress/wp-content/uploads/2024/02/linkedin.png" alt="LinkedIn" style="width: 30px; height: 30px;"></a>';
 
@@ -44,12 +49,19 @@ document.getElementById('signatureForm').addEventListener('submit', function(eve
         corporatePhoneInfo = 'Cel: +55 (' + corporatePhoneDDD + ') ' + corporatePhoneNumber + '<br>';
     }
 
+    if (hasCorporatePhone) {
+        logoWpp;
+    }else {
+        logoWpp = '<style display="none"></style>'
+    }
+    
+
     // Preencher as células da tabela com as informações
     var signature = '<table style="font-family: Calibri; font-size: 9pt;">' +
                     '<tr>' +
                     '<td class="coluna1" rowspan="2" style="text-align: center;"><img src="https://3geo.io/wordpress/wp-content/uploads/2023/09/Logo_horizontal-sem-fundo.png" alt="Logo" style="width: 190; height: 60px;"></td>' +
                         '<td style="vertical-align: top; max-width: 216px"><div class="name16">' + name + '</div><br><div style="vertical-align: bottom;"><strong>' + department + '</strong><br>' + email + '</div></td>' +
-                        '<td style="vertical-align: bottom; max-width: 216px"><div class="toTop" style="display: flex; align-items: center;">' + logoLinkedin + logoWeb + '</div>'+ '<div class="toBottom">' + corporatePhoneInfo + phone + '</div></td>' +
+                        '<td style="vertical-align: bottom; max-width: 216px"><div class="toTop" style="display: flex; align-items: center;">' + logoLinkedin + logoWeb + logoWpp + '</div>'+ '<div class="toBottom">' + corporatePhoneInfo + phone + '</div></td>' +
                     '</tr>' +
                     '<tr>' +
                         '<td style="max-width: 216px;"><strong>MATRIZ: </strong>' + mainOfficeInfo + '</td>' +
@@ -57,6 +69,8 @@ document.getElementById('signatureForm').addEventListener('submit', function(eve
                     '</tr>' +
                 '</table>';
 
+  
+    
     // Exibir a assinatura
     document.getElementById('signatureOutput').innerHTML = signature;
     var copyButton = document.getElementById('copyButton');
@@ -68,17 +82,20 @@ document.getElementById('corporatePhone').addEventListener('change', function() 
     var corporatePhoneSelect = document.getElementById('corporatePhone');
     var corporatePhoneNumberDDD = document.getElementById('corporatePhoneDDD');
     var corporatePhoneNumberInput = document.getElementById('corporatePhoneNumber');
+    var corporatePhoneCheckbox = document.getElementById('corporatePhoneCheckbox');
 
     if (corporatePhoneSelect.value === 'true') {
         corporatePhoneNumberDDD.style.display = 'inline-block';
         corporatePhoneNumberInput.style.display = 'inline-block';
         corporatePhoneNumberDDD.required = true; // Tornar o campo DDD obrigatório
         corporatePhoneNumberInput.required = true; // Tornar o campo Número obrigatório
+        corporatePhoneCheckbox.style.display = 'flex';
     } else {
         corporatePhoneNumberDDD.style.display = 'none';
         corporatePhoneNumberInput.style.display = 'none';
         corporatePhoneNumberDDD.required = false; // Remover a obrigatoriedade do campo DDD
         corporatePhoneNumberInput.required = false; // Remover a obrigatoriedade do campo Número
+        corporatePhoneCheckbox.style.display = 'none';
     }
 });
 
