@@ -12,13 +12,13 @@ document.getElementById('signatureForm').addEventListener('submit', function(eve
     var hasCorporatePhone = document.getElementById('hasCorporatePhone').checked;
 
     // Gerar a assinatura no padrão desejado
-    var logoWeb = '&#160&#160<a href="https://3geo.io"><img src="https://3geo.io/wordpress/wp-content/uploads/2024/02/website.png" alt="Website" style="width: 30px; height: 30px;"></img></a>';
+    var logoWeb = '&#160&#160<a href="https://3geo.io"><img src="https://3geo.io/wordpress/wp-content/uploads/2024/02/website-30x30-1.png" alt="Website" style="width: 30px; height: 30px;"></img></a>';
    
     var numeroWpp = 'https://api.whatsapp.com/send/?phone=55' + corporatePhoneDDD + corporatePhoneNumber.replace("-", "") + '&text&type=phone_number&app_absent=0';
 
-    var logoWpp = '&#160&#160<a href="' + numeroWpp + '"><img src="https://3geo.io/wordpress/wp-content/uploads/2024/02/logo-wpp-new.png" alt="Website" style="width: 30px; height: 30px;"></img></a>';
+    var logoWpp = '&#160&#160<a href="' + numeroWpp + '"><img src="https://3geo.io/wordpress/wp-content/uploads/2024/02/whatsapp-30x30-1.png" alt="WhatsApp" style="width: 30px; height: 30px;"></img></a>';
    
-    var logoLinkedin = '<a href="https://www.linkedin.com/company/3geo-consultoria-3geo-consulting/"><img src="https://3geo.io/wordpress/wp-content/uploads/2024/02/linkedin.png" alt="LinkedIn" style="width: 30px; height: 30px;"></a>';
+    var logoLinkedin = '<a href="https://www.linkedin.com/company/3geo-consultoria-3geo-consulting/"><img src="https://3geo.io/wordpress/wp-content/uploads/2024/02/linkedin-30x30-1.png" alt="LinkedIn" style="width: 30px; height: 30px;"></a>';
 
     var mainOfficeInfo = 'Avenida dos Engenheiros, 431, Manacás, Belo Horizonte - MG<br>' +
     'CEP/Zipcode:  30.840-563';
@@ -59,7 +59,7 @@ document.getElementById('signatureForm').addEventListener('submit', function(eve
     // Preencher as células da tabela com as informações
     var signature = '<table style="font-family: Calibri; font-size: 9pt;">' +
                     '<tr>' +
-                    '<td class="coluna1" rowspan="2" style="text-align: center;"><img src="https://3geo.io/wordpress/wp-content/uploads/2023/09/Logo_horizontal-sem-fundo.png" alt="Logo" style="width: 190; height: 60px;"></td>' +
+                    '<td class="coluna1" rowspan="2" style="text-align: center;"><img src="https://3geo.io/wordpress/wp-content/uploads/2024/02/logo-3geo-190x60-1.png" alt="Logo 3Geo" style="width: 190; height: 60px;"></td>' +
                         '<td style="vertical-align: top; max-width: 216px"><div class="name16">' + name + '</div><br><div style="vertical-align: bottom;"><strong>' + department + '</strong><br>' + email + '</div></td>' +
                         '<td style="vertical-align: bottom; max-width: 216px"><div class="toTop" style="display: flex; align-items: center;">' + logoLinkedin + logoWeb + logoWpp + '</div>'+ '<div class="toBottom">' + corporatePhoneInfo + phone + '</div></td>' +
                     '</tr>' +
