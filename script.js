@@ -23,7 +23,7 @@ document.getElementById('signatureForm').addEventListener('submit', function(eve
     var mainOfficeInfo = 'Avenida dos Engenheiros, 431, Manacás, Belo Horizonte - MG<br>' +
     'CEP/Zipcode:  30.840-563';
    
-    var phone = 'Telefone: +55 (21) 2718-3968';
+    var phone = 'Telefone: +55 (31) 2117-7080';
     
     var operationalOfficeInfo = ''; // Inicializar a variável para armazenar o valor exclusivo para operationalOffice
 
