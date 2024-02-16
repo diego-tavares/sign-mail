@@ -20,7 +20,7 @@ document.getElementById('signatureForm').addEventListener('submit', function(eve
    
     var logoLinkedin = '<a href="https://www.linkedin.com/company/3geo-consultoria-3geo-consulting/"><img src="https://3geo.io/wordpress/wp-content/uploads/2024/02/linkedin-30x30-1.png" alt="LinkedIn" style="width: 30px; height: 30px;"></a>';
 
-    var mainOfficeInfo = 'Avenida dos Engenheiros, 431, Manacás, Belo Horizonte - MG<br>' +
+    var mainOfficeInfo = 'Avenida dos Engenheiros, 431,'+ '<br>' +' Manacás, Belo Horizonte - MG<br>' +
     'CEP/Zipcode:  30.840-563';
    
     var phone = 'Telefone: +55 (31) 2117-7080';
@@ -60,8 +60,8 @@ document.getElementById('signatureForm').addEventListener('submit', function(eve
     var signature = '<table style="font-family: Calibri; font-size: 9pt;">' +
                     '<tr>' +
                     '<td class="coluna1" rowspan="2" style="text-align: center;"><img src="https://3geo.io/wordpress/wp-content/uploads/2024/02/logo-3geo-190x60-1.png" alt="Logo 3Geo" style="width: 190; height: 60px;"></td>' +
-                        '<td style="vertical-align: top; max-width: 216px"><div class="name16">' + name + '</div><br><div style="vertical-align: bottom;"><strong>' + department + '</strong><br>' + email + '</div></td>' +
-                        '<td style="vertical-align: bottom; max-width: 216px"><div class="toTop" style="display: flex; align-items: center;">' + logoLinkedin + logoWeb + logoWpp + '</div>'+ '<div class="toBottom">' + corporatePhoneInfo + phone + '</div></td>' +
+                        '<td style="vertical-align: top; width: 216px; max-width: 216px"><div class="name16">' + name + '</div><br><div style="vertical-align: bottom;"><strong>' + department + '</strong><br>' + email + '</div></td>' +
+                        '<td style="vertical-align: bottom; width: 216px; max-width: 216px"><div class="toTop" style="display: flex; align-items: center;">' + logoLinkedin + logoWeb + logoWpp + '</div>'+ '<div class="toBottom">' + corporatePhoneInfo + phone + '</div></td>' +
                     '</tr>' +
                     '<tr>' +
                         '<td style="max-width: 216px;"><strong>MATRIZ: </strong>' + mainOfficeInfo + '</td>' +
