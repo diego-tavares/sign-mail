@@ -16,7 +16,7 @@ document.getElementById('signatureForm').addEventListener('submit', function(eve
    
     var numeroWpp = 'https://api.whatsapp.com/send/?phone=55' + corporatePhoneDDD + corporatePhoneNumber.replace("-", "") + '&text&type=phone_number&app_absent=0';
 
-    var logoWpp = '&#160&#160<a href="' + numeroWpp + '"><img src="https://3geo.io/wordpress/wp-content/uploads/2024/02/logo-wpp-cinza.png" alt="Website" style="width: 30px; height: 30px;"></img></a>';
+    var logoWpp = '&#160&#160<a href="' + numeroWpp + '"><img src="https://3geo.io/wordpress/wp-content/uploads/2024/02/logo-wpp-new.png" alt="Website" style="width: 30px; height: 30px;"></img></a>';
    
     var logoLinkedin = '<a href="https://www.linkedin.com/company/3geo-consultoria-3geo-consulting/"><img src="https://3geo.io/wordpress/wp-content/uploads/2024/02/linkedin.png" alt="LinkedIn" style="width: 30px; height: 30px;"></a>';
 
