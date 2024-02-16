@@ -34,11 +34,11 @@ document.getElementById('signatureForm').addEventListener('submit', function(eve
                                      'CEP/ Zipcode: 24.360-400';
             break;
         case 'MG':
-            operationalOfficeInfo = 'Rua Santinho Linhares, 34 -Hamilton, Itabira, MG<br>' +
+            operationalOfficeInfo = 'Rua Santinho Linhares, 34<br>Hamilton, Itabira, MG<br>' +
                                      'CEP/ Zipcode: 35.900-383';
             break;
         case 'SP':
-            operationalOfficeInfo = 'Av. das Nações Unidas, 14261, Torre B, São Paulo/SP<br>' +
+            operationalOfficeInfo = 'Av. das Nações Unidas, 14261,<br> Torre B, São Paulo/SP<br>' +
                                      'CEP/Zipcode:  04.730-090';
             break;
     }
