@@ -38,8 +38,8 @@ document.getElementById('signatureForm').addEventListener('submit', function(eve
                                      'CEP/ Zipcode: 35.900-383';
             break;
         case 'SP':
-            operationalOfficeInfo = 'Av. das Nações Unidas, 14261,<br> Torre B, São Paulo/SP<br>' +
-                                     'CEP/Zipcode:  04.730-090';
+            operationalOfficeInfo = 'Av. Professor Flávio Pires de Camargo, 973, Caetetuba, Atibaia, SP<br>' +
+                                     'CEP/Zipcode:  12.951-750';
             break;
     }
 
