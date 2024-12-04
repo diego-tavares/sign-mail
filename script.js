@@ -30,8 +30,8 @@ document.getElementById('signatureForm').addEventListener('submit', function(eve
     // Tratar a resposta da ListBox de Operação e definir o valor exclusivo para operationalOffice
     switch (operation) {
         case 'RJ':
-            operationalOfficeInfo = 'Rua Tupis nº 144 casa 2 ' + '<br>' + 'São Francisco, Niterói, RJ<br>' +
-                                     'CEP/ Zipcode: 24.360-400';
+            operationalOfficeInfo = 'Av. Rui Barbosa, 482' + '<br>' + 'São Francisco, Niterói, RJ<br>' +
+                                     'CEP/ Zipcode: 24.360-440';
             break;
         case 'MG':
             operationalOfficeInfo = 'Rua Santinho Linhares, 34<br>Hamilton, Itabira, MG<br>' +
