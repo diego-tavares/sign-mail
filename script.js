@@ -59,7 +59,7 @@ document.getElementById('signatureForm').addEventListener('submit', function(eve
     // Preencher as células da tabela com as informações
     var signature = '<table style="font-family: Calibri; font-size: 9pt;">' +
                     '<tr>' +
-                    '<td class="coluna1" rowspan="2" style="text-align: center;"><img src="https://3geo.io/wordpress/wp-content/uploads/2024/02/logo-3geo-190x60-1.png" alt="Logo 3Geo" style="width: 190; height: 60px;"></td>' +
+                    '<td class="coluna1" rowspan="2" style="text-align: center;"><img src="https://3geo.io/wordpress/wp-content/uploads/2025/03/logo-25-anos-deitada.png" alt="Logo 3Geo" style="width: 190; height: 60px;"></td>' +
                         '<td style="vertical-align: top; width: 216px; max-width: 216px"><div class="name16">' + name + '</div><br><div style="vertical-align: bottom;"><strong>' + department + '</strong><br>' + email + '</div></td>' +
                         '<td style="vertical-align: bottom; width: 216px; max-width: 216px"><div class="toTop" style="display: flex; align-items: center;">' + logoLinkedin + logoWeb + logoWpp + '</div>'+ '<div class="toBottom">' + corporatePhoneInfo + phone + '</div></td>' +
                     '</tr>' +
