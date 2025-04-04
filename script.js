@@ -68,7 +68,7 @@ document.getElementById('signatureForm').addEventListener('submit', function(eve
                         '<td style="max-width: 240px; vertical-align: top; text-align: left;"><strong>FILIAL: </strong>' + operationalOfficeInfo + '</td>' +
                     '</tr>' +
                     '<tr>' +
-                        '<td colspan="3" style="text-align: center; padding-top: 20px;"><img src="https://3geo.io/wordpress/wp-content/uploads/2025/04/assinatura-de-email-FINAL-01.png" alt="Assinatura 3Geo" style="width: 325px; height: auto;"></td>' +
+                        '<td colspan="3" style="text-align: center;vertical-align: top;"><img src="https://3geo.io/wordpress/wp-content/uploads/2025/04/assinatura-de-email-FINAL-01.png" alt="Assinatura 3Geo" style="width: 325px; height: auto;"></td>' +
                     '</tr>' +
                 '</table>';
 
