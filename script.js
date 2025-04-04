@@ -30,7 +30,7 @@ document.getElementById('signatureForm').addEventListener('submit', function(eve
     // Tratar a resposta da ListBox de Operação e definir o valor exclusivo para operationalOffice
     switch (operation) {
         case 'RJ':
-            operationalOfficeInfo = 'Av. Rui Barbosa, 482' + '<br>' + 'São Francisco, Niterói, RJ<br>' +
+            operationalOfficeInfo = 'Av. Rui Barbosa, 482 ' + '<br>' + 'São Francisco, Niterói, RJ<br>' +
                                      'CEP/ Zipcode: 24.360-440';
             break;
         case 'MG':
@@ -59,13 +59,16 @@ document.getElementById('signatureForm').addEventListener('submit', function(eve
     // Preencher as células da tabela com as informações
     var signature = '<table style="font-family: Calibri; font-size: 9pt;">' +
                     '<tr>' +
-                    '<td class="coluna1" rowspan="2" style="text-align: center;"><img src="https://3geo.io/wordpress/wp-content/uploads/2025/03/logo-25-anos-deitada.png" alt="Logo 3Geo" style="width: 190; height: 60px;"></td>' +
-                        '<td style="vertical-align: top; width: 216px; max-width: 216px"><div class="name16">' + name + '</div><br><div style="vertical-align: bottom;"><strong>' + department + '</strong><br>' + email + '</div></td>' +
-                        '<td style="vertical-align: bottom; width: 216px; max-width: 216px"><div class="toTop" style="display: flex; align-items: center;">' + logoLinkedin + logoWeb + logoWpp + '</div>'+ '<div class="toBottom">' + corporatePhoneInfo + phone + '</div></td>' +
+                    '<td class="coluna1" rowspan="2" style="text-align: center; vertical-align: middle;"><img src="https://3geo.io/wordpress/wp-content/uploads/2025/03/logo-25-FINAL-2-05.png" alt="Logo 3Geo" style="width: 190; height: 175px;"></td>' +
+                        '<td style="vertical-align: bottom; width: 240px; max-width: 240px; text-align: left;"><div class="name16">' + name + '</div><br><div style="vertical-align: bottom;"><strong>' + department + '</strong><br>' + email + '</div></td>' +
+                        '<td style="vertical-align: bottom; width: 240px; max-width: 240px; text-align: left;"><div class="toTop" style="display: flex; align-items: center;">' + logoLinkedin + logoWeb + logoWpp + '</div>'+ '<div class="toBottom">' + corporatePhoneInfo + phone + '</div></td>' +
                     '</tr>' +
                     '<tr>' +
-                        '<td style="max-width: 216px;"><strong>MATRIZ: </strong>' + mainOfficeInfo + '</td>' +
-                        '<td style="max-width: 216px;"><strong>FILIAL: </strong>' + operationalOfficeInfo + '</td>' +
+                        '<td style="max-width: 240px; vertical-align: top; text-align: left;"><strong>MATRIZ: </strong>' + mainOfficeInfo + '</td>' +
+                        '<td style="max-width: 240px; vertical-align: top; text-align: left;"><strong>FILIAL: </strong>' + operationalOfficeInfo + '</td>' +
+                    '</tr>' +
+                    '<tr>' +
+                        '<td colspan="3" style="text-align: center; padding-top: 20px;"><img src="https://3geo.io/wordpress/wp-content/uploads/2025/04/assinatura-de-email-FINAL-01.png" alt="Assinatura 3Geo" style="width: 325px; height: auto;"></td>' +
                     '</tr>' +
                 '</table>';
 
