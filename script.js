@@ -20,8 +20,8 @@ document.getElementById('signatureForm').addEventListener('submit', function(eve
    
     var logoLinkedin = '<a href="https://www.linkedin.com/company/3geo-consultoria-3geo-consulting/"><img src="https://3geo.io/wordpress/wp-content/uploads/2024/02/linkedin-30x30-1.png" alt="LinkedIn" style="width: 30px; height: 30px;"></a>';
 
-    var mainOfficeInfo = 'Avenida dos Engenheiros, 431,'+ '<br>' +' Manacás, Belo Horizonte - MG<br>' +
-    'CEP/Zipcode:  30.840-563';
+    var mainOfficeInfo = 'Rua Barão de Petrópolis, 211,'+ '<br>' +' Itatiaia, Belo Horizonte - MG<br>' +
+    'CEP/Zipcode:  31.360-690';
    
     var phone = 'Telefone: +55 (31) 2117-7080';
     
@@ -33,10 +33,7 @@ document.getElementById('signatureForm').addEventListener('submit', function(eve
             operationalOfficeInfo = 'Av. Rui Barbosa, 482 ' + '<br>' + 'São Francisco, Niterói, RJ<br>' +
                                      'CEP/ Zipcode: 24.360-440';
             break;
-        case 'MG':
-            operationalOfficeInfo = 'Rua Santinho Linhares, 34<br>Hamilton, Itabira, MG<br>' +
-                                     'CEP/ Zipcode: 35.900-383';
-            break;
+
         case 'SP':
             operationalOfficeInfo = 'Av. Professor Flávio Pires de Camargo, 973, Caetetuba, Atibaia, SP<br>' +
                                      'CEP/Zipcode:  12.951-750';
